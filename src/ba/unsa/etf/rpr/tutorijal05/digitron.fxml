@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="254.0" prefWidth="204.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="254.0" prefWidth="204.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.tutorijal05.Controller">
     <stylesheets>
         <URL value="@kalkulator.css" />
     </stylesheets>
@@ -35,7 +35,7 @@
       <Button fx:id="devideBtn" mnemonicParsing="false" onAction="#devideBtn" prefHeight="41.0" prefWidth="59.0" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Button fx:id="productBtn" mnemonicParsing="false" onAction="#productBtn" prefHeight="40.0" prefWidth="72.0" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <Button fx:id="minusBtn" mnemonicParsing="false" onAction="#minusBtn" prefHeight="46.0" prefWidth="59.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Button fx:id="btn7" mnemonicParsing="false" onAction="#sevenClick" prefHeight="42.0" prefWidth="59.0" text="7" GridPane.rowIndex="2" />
+       <Button fx:id="btn7" maxWidth="Infinity" mnemonicParsing="false" onAction="#sevenClick" prefHeight="30.0" prefWidth="40.0" text="7" GridPane.rowIndex="2" />
       <Button fx:id="btn8" mnemonicParsing="false" onAction="#eightClick" prefHeight="44.0" prefWidth="59.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button fx:id="btn9" mnemonicParsing="false" onAction="#nineClick" prefHeight="44.0" prefWidth="59.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
       <Button fx:id="btn4" mnemonicParsing="false" onAction="#fourClick" prefHeight="40.0" prefWidth="59.0" text="4" GridPane.rowIndex="3" />

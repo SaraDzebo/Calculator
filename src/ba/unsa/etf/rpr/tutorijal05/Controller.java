@@ -38,7 +38,7 @@ public class Controller {
         tekst = new SimpleStringProperty("0");
     }
 
-    public String getText() {
+    public String getTekst() {
         return tekst.get();
     }
 
@@ -77,7 +77,7 @@ public class Controller {
         product=tekst.get();
         tekst.set("");
     }
-    public void divideBtn(ActionEvent actionEvent) {
+    public void devideBtn(ActionEvent actionEvent) {
         divide=tekst.get();
         tekst.set("");
     }
