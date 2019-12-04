@@ -5,8 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-import java.awt.*;
-
 
 public class Controller {
 
@@ -54,32 +52,32 @@ public class Controller {
 
     public void zeroClick(ActionEvent actionEvent) { DodajCifru(0);}
     public void oneClick(ActionEvent actionEvent) { DodajCifru(1);}
-    public void twoClick(javafx.event.ActionEvent actionEvent) { DodajCifru(2); }
-    public void threeClick(javafx.event.ActionEvent actionEvent) { DodajCifru(3); }
-    public void fourClick(javafx.event.ActionEvent actionEvent) { DodajCifru(4); }
-    public void fiveClick(javafx.event.ActionEvent actionEvent) { DodajCifru(5); }
-    public void sixClick(javafx.event.ActionEvent actionEvent) { DodajCifru(6); }
-    public void sevenClick(javafx.event.ActionEvent actionEvent) { DodajCifru(7); }
-    public void eightClick(javafx.event.ActionEvent actionEvent) { DodajCifru(8); }
-    public void nineClick(javafx.event.ActionEvent actionEvent) { DodajCifru(9);}
-    public void dotBtn(javafx.event.ActionEvent actionEvent) {
+    public void twoClick(ActionEvent actionEvent) { DodajCifru(2); }
+    public void threeClick(ActionEvent actionEvent) { DodajCifru(3); }
+    public void fourClick(ActionEvent actionEvent) { DodajCifru(4); }
+    public void fiveClick(ActionEvent actionEvent) { DodajCifru(5); }
+    public void sixClick(ActionEvent actionEvent) { DodajCifru(6); }
+    public void sevenClick(ActionEvent actionEvent) { DodajCifru(7); }
+    public void eightClick(ActionEvent actionEvent) { DodajCifru(8); }
+    public void nineClick(ActionEvent actionEvent) { DodajCifru(9);}
+
+    public void dotBtn(ActionEvent actionEvent) {
         if(decimalni==false)tekst.set(tekst.get()+dotBtn.getText());
-        // if(tekst.get()==".")tekst.set("0.");
         decimalni=true;
     }
-    public void plusBtn(javafx.event.ActionEvent actionEvent) {
+    public void plusBtn(ActionEvent actionEvent) {
         prviBroj=tekst.get();
         tekst.set("");
     }
-    public void minusBtn(javafx.event.ActionEvent actionEvent) {
+    public void minusBtn(ActionEvent actionEvent) {
         minus=tekst.get();
         tekst.set("");
     }
-    public void productBtn(javafx.event.ActionEvent actionEvent) {
+    public void productBtn(ActionEvent actionEvent) {
         product=tekst.get();
         tekst.set("");
     }
-    public void divideBtn(javafx.event.ActionEvent actionEvent) {
+    public void divideBtn(ActionEvent actionEvent) {
         divide=tekst.get();
         tekst.set("");
     }
@@ -111,9 +109,44 @@ public class Controller {
 
     }
 
+    public void equalsBtn(ActionEvent actionEvent) {
+            decimalni=false;
+            drugiBroj=tekst.get();
+            String broj="";
+            double br2=Double.parseDouble((drugiBroj));
+            if(prviBroj!="") {
+                double br1 = Double.parseDouble(prviBroj);
+                double jednako = br1 + br2;
+                broj = Double.toString(jednako);
+            }
+            if(minus!="") {
+                double br1 = Double.parseDouble(minus);
+                double jednako = br1 - br2;
+                broj = Double.toString(jednako);
+            }
+            if(product!="") {
+                double br1 = Double.parseDouble(product);
+                double jednako = br1*br2;
+                broj = Double.toString(jednako);
+            }
+            if(divide!="") {
+                double br1 = Double.parseDouble(divide);
+                double jednako = br1/br2;
+                broj = Double.toString(jednako);
+                if(br2==0 || Math.abs(br2-0)<0.001) broj="Nije dozvoljeno";
 
+            }
+            tekst.set(broj);
+        }
 
-
+    public void percentBtn(ActionEvent actionEvent) {
+        String posto=tekst.get();
+        tekst.set(tekst.get()+percentBtn.getText());
+        double br1=Double.parseDouble(posto);
+        br1/=100;
+        posto=Double.toString(br1);
+        tekst.set(posto);
+    }
 }
 
 
