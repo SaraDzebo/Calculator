@@ -1,0 +1,10 @@
+#display{
+-fx-background-color: lightgreen;
+-fx-font-size: 20;
+-fx-font-family: Arial;
+-fx-stroke:black;
+-fx-font-style:italic;
+-fx-border-radius: 0% ;
+-fx-background-radius: 0%;
+-fx-padding: 0;
+}
