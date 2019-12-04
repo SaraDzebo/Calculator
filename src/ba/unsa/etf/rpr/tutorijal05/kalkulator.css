@@ -4,9 +4,6 @@
 -fx-font-family: Arial;
 -fx-stroke:black;
 -fx-font-style:italic;
--fx-border-radius: 0% ;
--fx-background-radius: 0%;
--fx-padding: 0;
 }
 
 #equalsBtn{
@@ -16,9 +13,6 @@
     -fx-font-weight: lighter;
     -fx-stroke: black;
     -fx-font-style:italic;
-    -fx-border-radius: 0% ;
-    -fx-background-radius: 0%;
-    -fx-padding: 0;
 }
 
 #tekst{
@@ -28,7 +22,4 @@
     -fx-font-weight: lighter;
     -fx-stroke: black;
     -fx-font-style:italic;
-    -fx-border-radius: 0% ;
-    -fx-background-radius: 0%;
-    -fx-padding: 0;
 }
