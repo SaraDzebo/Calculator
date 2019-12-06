@@ -106,4 +106,14 @@ class MainTest {
         robot.clickOn("#btn0");
         assertEquals("10", display.getText());
     }
+
+    @Test
+    public void devideBtn0 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn3");
+        robot.clickOn("#devideBtn");
+        robot.clickOn("#btn0");
+        assertEquals("Ne moze se dijeliti sa nulom.", display.getText());
+    }
 }
