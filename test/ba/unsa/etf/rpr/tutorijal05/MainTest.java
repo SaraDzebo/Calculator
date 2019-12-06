@@ -114,6 +114,7 @@ class MainTest {
         robot.clickOn("#btn3");
         robot.clickOn("#devideBtn");
         robot.clickOn("#btn0");
+        robot.clickOn("equalsBtn");
         assertEquals("Ne moze se dijeliti sa nulom.", display.getText());
     }
 }
